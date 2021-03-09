@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Lession1and2 from './codeacademy/lession1and2';
+import Lession3 from './codeacademy/lession3';
 
 export const dataReducer = (state, action) => {
   if (action.type === 'SET_ERROR') {
@@ -35,26 +37,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>My Counter</h1>
-      <Counter counter={counter} />
-
-      <button type="button" onClick={() => setCounter(counter + 1)}>
-        Increment
-      </button>
-
-      <button type="button" onClick={() => setCounter(counter - 1)}>
-        Decrement
-      </button>
-
-      <h2>My Async Data</h2>
-
-      {data.error && <div className="error">Error</div>}
-
-      <ul>
-        {data.list.map((item) => (
-          <li key={item.objectID}>{item.title}</li>
-        ))}
-      </ul>
+      Lesson 1 & 2
+      <Lession1and2 />
+      Lesson 3
+      <Lession3 />
     </div>
   );
 };
