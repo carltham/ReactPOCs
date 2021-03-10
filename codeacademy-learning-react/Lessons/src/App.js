@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Lession1and2 from './codeacademy/lession1and2';
 import Lession3 from './codeacademy/lession3';
+import Contact from './codeacademy/project';
 
 export const dataReducer = (state, action) => {
   if (action.type === 'SET_ERROR') {
@@ -41,6 +42,9 @@ const App = () => {
       <Lession1and2 />
       Lesson 3
       <Lession3 />
+      Contact
+      <br />
+      <Contact />
     </div>
   );
 };
