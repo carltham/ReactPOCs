@@ -29,8 +29,10 @@ class Random extends React.Component {
     this.applyColor();
   }
   componentWillUnmount() {
-    cancelFetch(this.fetchID);
+    this.cancelFetch(this.fetchID);
   }
+
+  cancelFetch(id) {}
 
   formatColor(ary) {
     return "rgb(" + ary.join(", ") + ")";

@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Random from "./RandomColorPicker/Random";
+import Random from "./components/RandomColorPicker/Random";
 import Clock from "./Clock";
 
 function App() {
