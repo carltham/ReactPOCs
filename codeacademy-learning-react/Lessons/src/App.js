@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Random from "./components/RandomColorPicker/Random";
-import Clock from "./Clock";
+import Clock from "./1Initial/Clock";
 
 function App() {
   const width = "200px";
