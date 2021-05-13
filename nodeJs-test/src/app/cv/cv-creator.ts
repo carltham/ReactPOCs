@@ -1,4 +1,4 @@
-import { FileHandler } from "./file-handler";
+import { FileHandler } from "../tools/file-handler";
 export class Report {
   _OUTPUT_TechnologiesOverTime = "./output/technologies-over-time.json";
   _OUTPUT_TechnologiesUnique = "./output/technologies-unique.json";

@@ -1,6 +1,6 @@
 import fs from "fs";
 import crypto, { Hash } from "crypto";
-import { Constants } from "./constants";
+import { Constants } from "../common/constants";
 
 export class FileHandler {
   fileName: string;
@@ -65,18 +65,18 @@ export class FileHandler {
     }
   };
 
-  writeArray = (fileName, data) => {
-    data.forEach((value) => {
-      const json = JSON.stringify(value) + "\n";
-      // console.log("json = ", json);
+  writeArray = async (fileName, data) => {
+    let result = await new Promise((resolve, reject) => {
+      fs.unlinkSync(fileName);
+      console.log("data = ", data);
+      data.forEach((value) => {
+        const json = JSON.stringify(value) + "\n";
+        // console.log("json = ", json);
 
-      fs.appendFile(fileName, value + "\n", function (err) {
-        if (err) {
-          console.log("err=", err);
-        } else {
-        }
+        fs.appendFileSync(fileName, value + "\n");
       });
     });
+    console.log("result = ", result);
   };
 
   writeJson = (fileName: string, obj: object) => {

@@ -1,6 +1,6 @@
 import https from "https";
-import { Constants } from "../cv/constants";
-import { FileHandler } from "../cv/file-handler";
+import { Constants } from "../common/constants";
+import { FileHandler } from "../tools/file-handler";
 
 const _AGENT_KEY = "http.agent";
 const _AGENT_VALUE = "Chrome";
@@ -10,41 +10,60 @@ const _ENCODING = "utf8";
 
 const _OUTPUT_FILE = "./output/output.txt";
 
-export const call = () => {
-  const fileHandler = new FileHandler(_OUTPUT_FILE);
-  const req = https
-    .get(_API_URL, (resp) => {
-      resp.setEncoding(_ENCODING);
-      let data = "";
+export class Caller {
+  constructor() {
+    console.log("Caller Instantiated !!");
+  }
+  makeCall = (outputFile: string) => {
+    console.log("Caller.call called !!");
+    const fileHandler = new FileHandler(outputFile);
+    let hashPromise = new Promise((resolve, reject) => {
+      const req = https
+        .get(_API_URL, (resp) => {
+          resp.setEncoding(_ENCODING);
+          let data = "";
 
-      resp.on("data", (chunk) => {
-        data += chunk;
+          resp.on("data", (chunk) => {
+            data += chunk;
+          });
+
+          resp.on("end", () => {
+            let jsonData = JSON.parse(data);
+            let jsonString = jsonData.data;
+            let resultMap;
+            try {
+              resultMap = fileHandler.parseJsonString(jsonString);
+            } catch (e) {
+              console.log(e);
+            }
+            const writables = Array.of(
+              ...resultMap.get(Constants._VALID_RESULTS).keys()
+            );
+            if (writables.length > 0) {
+              let keys = Array.from(writables.keys());
+              console.log("writables = ", writables);
+              console.log("keys = ", keys);
+              fileHandler.assureFileExists(outputFile);
+              fileHandler.writeArray(outputFile, writables);
+
+              let hash = fileHandler.calculateHash(outputFile);
+              console.log("hash = ", hash);
+              resolve(hash);
+            }
+          });
+        })
+        .on("error", (error) => {
+          console.log("Error: " + error.message);
+          reject(error);
+        });
+
+      req.on("error", (error) => {
+        console.error(error);
+        reject(error);
       });
 
-      resp.on("end", () => {
-        let jsonData = JSON.parse(data);
-        let jsonString = jsonData.data;
-        let resultMap;
-        try {
-          resultMap = fileHandler.parseJsonString(jsonString);
-        } catch (e) {
-          console.log(e);
-        }
-        const writables = resultMap.get(Constants._VALID_RESULTS);
-        if (writables.size > 0) {
-          fileHandler.assureFileExists(_OUTPUT_FILE);
-          fileHandler.writeArray(_OUTPUT_FILE, Array.from(writables.keys()));
-          fileHandler.calculateHash(_OUTPUT_FILE);
-        }
-      });
-    })
-    .on("error", (err) => {
-      console.log("Error: " + err.message);
+      req.end();
     });
-
-  req.on("error", (error) => {
-    console.error(error);
-  });
-
-  req.end();
-};
+    return hashPromise;
+  };
+}

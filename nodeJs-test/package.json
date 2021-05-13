@@ -3,16 +3,42 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src/app/cv"
+      ],
+      "extensions": "ts,html,css",
+      "quiet": false
+    },
+    "run-dev": {
+      "patterns": [ "dist"],
+      "extensions": "js,jsx",
+      "ignore": "src/vendor/external.min.js",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 2500,
+      "runOnChangeOnly": false
+    },
+    "test": {
+      "patterns": [ "src"],
+      "extensions": "ts",
+      "quiet": true,
+      "legacyWatch": true,
+      "runOnChangeOnly": false
+    }
+  },
   "scripts": {
     "clean-modules": "rm node_modules -R;",
     "setup-modules": "npm install;",
-    "build": "npm run clean-dist && npm run copy-files && tsc --watch --preserveWatchOutput",
-    "clean-dist": "rimraf dist/",
-    "clean-output": "rimraf dist/",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist/ & rimraf output/",
     "copy-files": "copyfiles -u 1 src/*.js src/css/*.css dist/",
-    "start": "npm run clean-dist && npm run clean-dist && concurrently \"npm run build\" \"nodemon dist/app/index.js --trace-uncaught\"",
+    "run-dev": "npm run copy-files && nodemon dist/app/index.js --trace-uncaught",
+    "start": "npm run build && npm run run-dev",
     "test": "cross-env TS_NODE_FILES=true mocha --exit --require ts-node/register --colors src/**/*.spec.ts",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc npm run test", 
+    "watch": "npm-watch"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +63,7 @@
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.19",
     "ts-node": "^8.3.0",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "watch": "^1.0.2"
   }
 }
