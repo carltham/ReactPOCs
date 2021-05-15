@@ -24,3 +24,5 @@ yarn-error.log*
 /.vscode/
 /nbproject/
 /dist/
+/output/
+/.nyc_output/

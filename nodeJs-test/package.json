@@ -12,7 +12,9 @@
       "quiet": false
     },
     "run-dev": {
-      "patterns": [ "dist"],
+      "patterns": [
+        "dist"
+      ],
       "extensions": "js,jsx",
       "ignore": "src/vendor/external.min.js",
       "quiet": true,
@@ -21,7 +23,9 @@
       "runOnChangeOnly": false
     },
     "test": {
-      "patterns": [ "src"],
+      "patterns": [
+        "src"
+      ],
       "extensions": "ts",
       "quiet": true,
       "legacyWatch": true,
@@ -37,8 +41,24 @@
     "run-dev": "npm run copy-files && nodemon dist/app/index.js --trace-uncaught",
     "start": "npm run build && npm run run-dev",
     "test": "cross-env TS_NODE_FILES=true mocha --exit --require ts-node/register --colors src/**/*.spec.ts",
-    "coverage": "nyc npm run test", 
+    "coverage": "nyc npm run test",
+    "coverage2": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "watch": "npm-watch"
+  },
+  "nyc": {
+    "_comment": "Purpose of this part: to do code coverage within Mocha/Chai using Istanbul",
+    "register": "babel-register",
+    "include": [
+      "dist/**/*.js",
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "**/test/**",
+      "**/coverage/**",
+      "**/*spec.ts"
+    ],
+    "all": true
   },
   "keywords": [],
   "author": "",
@@ -57,6 +77,7 @@
     "concurrently": "^6.0.0",
     "copyfiles": "^2.4.1",
     "cross-env": "^5.2.0",
+    "istanbul": "^0.4.5",
     "mocha": "^6.2.0",
     "nodemon": "^2.0.7",
     "nyc": "^14.1.1",

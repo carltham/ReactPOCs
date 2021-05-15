@@ -1,9 +1,13 @@
-import { call } from "./app/test/caller";
-import { Report } from "./app/cv/cv-creator";
+import { Caller } from "./app/test/caller";
+import { CvReporter } from "./app/cv/cv-reporter";
 import { dataJsonArray } from "./app/cv/data";
+import { Constants } from "./app/cv/constants";
 require("source-map-support").install();
 
-call();
+new Caller();
 
-const report = new Report(dataJsonArray);
-report.createHeaderJson();
+const reporter = new CvReporter(
+  Constants._OUTPUT_TechnologiesOverTime,
+  dataJsonArray
+);
+reporter.createReport();

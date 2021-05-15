@@ -1,6 +1,7 @@
 import https from "https";
-import { Constants } from "../common/constants";
+import { TestConstants } from "./test-constants";
 import { FileHandler } from "../tools/file-handler";
+import { TestParser } from "./test-parser";
 
 const _AGENT_KEY = "http.agent";
 const _AGENT_VALUE = "Chrome";
@@ -17,6 +18,7 @@ export class Caller {
   makeCall = (outputFile: string) => {
     console.log("Caller.call called !!");
     const fileHandler = new FileHandler(outputFile);
+    const cvParser = new TestParser();
     let hashPromise = new Promise((resolve, reject) => {
       const req = https
         .get(_API_URL, (resp) => {
@@ -32,12 +34,12 @@ export class Caller {
             let jsonString = jsonData.data;
             let resultMap;
             try {
-              resultMap = fileHandler.parseJsonString(jsonString);
+              resultMap = cvParser.parseJsonString(jsonString);
             } catch (e) {
               console.log(e);
             }
             const writables = Array.of(
-              ...resultMap.get(Constants._VALID_RESULTS).keys()
+              ...resultMap.get(TestConstants._VALID_RESULTS).keys()
             );
             if (writables.length > 0) {
               let keys = Array.from(writables.keys());

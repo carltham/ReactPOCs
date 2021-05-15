@@ -1,17 +1,15 @@
 import { FileHandler } from "../tools/file-handler";
-export class Report {
-  _OUTPUT_TechnologiesOverTime = "./output/technologies-over-time.json";
-  _OUTPUT_TechnologiesUnique = "./output/technologies-unique.json";
-  _OUTPUT_TechnologiesLastUsed = "./output/technologies-last-used.json";
+import { Constants, ReportType } from "./constants";
+export class CvReporter {
   dataJsonArray: any;
   definedHeaders = ["start", "end", "client", "location", "position"];
   fileHandler: FileHandler;
 
-  constructor(dataJsonArray) {
+  constructor(private reportType: ReportType, dataJsonArray: any) {
     this.dataJsonArray = dataJsonArray;
-    this.fileHandler = new FileHandler(this._OUTPUT_TechnologiesOverTime);
+    this.fileHandler = new FileHandler(reportType.fileName);
   }
-  createHeaderJson = () => {
+  createReport = () => {
     const jsonArray = [];
     this.dataJsonArray.forEach((dataJson) => {
       const head = dataJson.head.trim().split("=>");
@@ -57,24 +55,10 @@ export class Report {
     const jsonString = '{ "entries":[ ' + jsonArray.join() + "] }";
     // console.log("jsonString = ", jsonString);
     // console.log("jsonized = ", JSON.parse(jsonString));
-    this.fileHandler.assureFileExists(this._OUTPUT_TechnologiesOverTime);
+    this.fileHandler.assureFileExists(this.reportType.fileName);
     this.fileHandler.writeJson(
-      this._OUTPUT_TechnologiesOverTime,
+      this.reportType.fileName,
       JSON.parse(jsonString)
     );
-  };
-  createTechnologies = () => {
-    this.dataJsonArray.forEach((dataJson) => {
-      const data = dataJson.technologies.trim().split("=>");
-
-      const map = new Map();
-
-      data.forEach((word, index) => {
-        map.set(word.toLowerCase(), word);
-      });
-      console.log("map = ", ...map.values());
-      var mapAsc = new Map([...map.entries()].sort());
-      console.log("mapString = ", Array.from(mapAsc.values()).sort().join(","));
-    });
   };
 }

@@ -1,6 +1,5 @@
 import fs from "fs";
 import crypto, { Hash } from "crypto";
-import { Constants } from "../common/constants";
 
 export class FileHandler {
   fileName: string;
@@ -13,12 +12,13 @@ export class FileHandler {
     this.fileName = fileName;
   }
 
-  calculateHash = (filename: string) => {
-    return this.calculateHashImpl(filename, this.shasum);
+  calculateHash = async (filename: string) => {
+    const hash: string = await this.calculateHashImpl(filename, this.shasum);
+    return hash;
   };
 
   calculateHashImpl = (filename: string, shasum) => {
-    let promise = new Promise(function (resolve, reject) {
+    let promise = new Promise<string>(function (resolve, reject) {
       const file = fs.readFile(filename, "utf8", function (err, data) {
         if (err) {
           reject(err);
@@ -47,36 +47,18 @@ export class FileHandler {
       console.log(`File :${file}  already exists !`);
     } else {
       console.log(`File :${file}  does not exists !`);
-      const nameArray = fileName.split("/");
-      if (nameArray.length > 1) {
-        const path = nameArray.slice(0, nameArray.length - 1).join("/");
-        console.log(`Assuring path :${path} !`);
-        if (fs.existsSync(path)) {
-          console.log("Directory exists!");
-        } else {
-          console.log(`Directory not found, creating ${path}`);
-          fs.mkdirSync(path, { recursive: true });
-        }
-      }
-      console.log(`Creating file :${fileName} !`);
-      fs.writeFile(file, "", function (err) {
-        if (err) throw err;
-      });
+      this.createFile(fileName);
     }
+    return true;
   };
 
-  writeArray = async (fileName, data) => {
-    let result = await new Promise((resolve, reject) => {
-      fs.unlinkSync(fileName);
-      console.log("data = ", data);
-      data.forEach((value) => {
-        const json = JSON.stringify(value) + "\n";
-        // console.log("json = ", json);
-
-        fs.appendFileSync(fileName, value + "\n");
-      });
+  writeArray = (fileName: string, data: any) => {
+    this.deleteFile(fileName);
+    console.log("data = ", data);
+    data.forEach((value) => {
+      fs.appendFileSync(fileName, value + "\n");
     });
-    console.log("result = ", result);
+    return true;
   };
 
   writeJson = (fileName: string, obj: object) => {
@@ -87,6 +69,7 @@ export class FileHandler {
         console.log("err=", err);
       }
     });
+    return true;
   };
 
   writeString = (fileName: string, jsonString: string) => {
@@ -99,45 +82,29 @@ export class FileHandler {
         console.log("result=", err);
       }
     });
+    return true;
   };
 
-  parseJsonString = (jsonString) => {
-    const valuesString = jsonString
-      .replace(Constants._HEADER_IDENTIFIER, Constants._EMPTY_STRING)
-      .replace(Constants._TAIL_IDENTIFIER, Constants._EMPTY_STRING);
-    const valesArray = valuesString.split(",");
-    let key;
-    let stringValue;
-    const validEntriesMap = new Map();
-    const invalidEntriesMap = new Map();
-    valesArray.forEach((entryPart) => {
-      entryPart = entryPart.trim();
-      if (entryPart.startsWith(Constants._KEY_IDENTIFIER)) {
-        key = entryPart.replace(
-          Constants._KEY_IDENTIFIER,
-          Constants._EMPTY_STRING
-        );
-      } else if (entryPart.startsWith(Constants._VALUE_IDENTIFIER)) {
-        if (key === null) {
-          throw "Key was missing to this value ..." + entryPart;
-        }
-        stringValue = entryPart.replace(
-          Constants._VALUE_IDENTIFIER,
-          Constants._EMPTY_STRING
-        );
-        const value = Number(stringValue);
-        if (value === Constants._SEARCHED_VALUE) {
-          validEntriesMap.set(key, stringValue);
-        } else {
-          invalidEntriesMap.set(key, stringValue);
-        }
-      } else if (entryPart !== "") {
-        console.log("Unknown entry found ...", entryPart);
+  createFile = (fileName: string) => {
+    const nameArray = fileName.split("/");
+    if (nameArray.length > 1) {
+      const path = nameArray.slice(0, nameArray.length - 1).join("/");
+      console.log(`Assuring path :${path} !`);
+      if (fs.existsSync(path)) {
+        console.log("Directory exists!");
+      } else {
+        console.log(`Directory not found, creating ${path}`);
+        fs.mkdirSync(path, { recursive: true });
       }
+    }
+    console.log(`Creating file :${fileName} !`);
+    fs.writeFile(fileName, "", function (err) {
+      if (err) throw err;
     });
-    const resultMap = new Map();
-    resultMap.set(Constants._VALID_RESULTS, validEntriesMap);
-    resultMap.set(Constants._INVALID_RESULTS, invalidEntriesMap);
-    return resultMap;
+  };
+  deleteFile = (fileName: string) => {
+    if (fs.existsSync(fileName)) {
+      fs.unlinkSync(fileName);
+    }
   };
 }

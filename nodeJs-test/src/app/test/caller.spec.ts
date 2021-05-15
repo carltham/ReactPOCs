@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { Caller } from "../test/caller";
+import { Caller } from "./caller";
 
 describe("Caller", () => {
   const testDataFile = "test/testdata/output.txt";
