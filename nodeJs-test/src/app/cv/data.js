@@ -5,135 +5,135 @@
 //     client:"TENDEREASY AB",
 //     position:"Senior Java developer,Architect",
 //     head:"",technologies:
-//      "CI, Angular7, ANT, MAVEN, JSF, Authentication, Java, REST, JSF, Spring, refactoring, Architecture, TDD, Junit, Integration tests (Java as well as Angular, ie Frontend AND backend tests) ANT, MAVEN, MySQL",
+//      "CI, Angular7, Build-ANT, Build-Maven, JSF, Security-Authentication, Java, API-REST, JSF, Spring, refactoring, Adm-Architecture, Testing-TDD, Testing-JUnit, Testing-Integration-Java, Testing-Integration-Angular, ie Frontend AND backend tests) Build-ANT, Build-Maven, DB-MySQL",
 //   },
 // ];
 export const dataJsonArray = [
   {
     head: "2020-06=>2020-08=>TENDEREASY AB=>Stockholm=>Senior Java developer,Architect",
     technologies:
-      "CI, Angular7, ANT, MAVEN, JSF, Authentication, Java, REST, JSF, Spring, refactoring, Architecture, TDD, Junit, Integration tests (Java as well as Angular, ie Frontend AND backend tests) ANT, MAVEN, MySQL",
+      "Spring-Security, CI-Jenkins-Development, CI-Jenkins-Configuration, JavaScript-Angular7, Build-ANT, Build-Maven, JSF, Security-Authentication, DB-Flyway, Java, API-REST, JSF, Spring, refactoring, Adm-Architecture, Testing-TDD, Testing-JUnit, Testing-Integration,Testing-Karma/Jasmine, Build-ANT, Build-Maven, DB-MySQL, Versioning-Git, Agile-Jira, IDE-Code",
   },
   {
     head: "2019-11=>2020-05=>ASSA ABLOY AB=>Stockholm=>Java developer",
     technologies:
-      "Swing, code quality, unit tests and scenario tests,  desktop, GUI,Teamcity test server, pair programming, Java, TDD, Junit, refactoring, Swing, CI/CD, Teamcity (like Jenkins), bugfixing, documentation.",
+      "Agile-Jira, Java-Swing, Testing-JUnit,Testing-Scenarios,Testing-Swing,CI-Teamcity-Development, CI-Teamcity-Configuration, QC-Pair programming, Java, Testing-TDD, Testing-JUnit, refactoring,  Java-Swing, CI-Teamcity, Maintenance-Bugfixing, Adm-Documentation",
   },
   {
     head: "2019-05=>2019-10=>Adtoox AB=>Stockholm=>Systems Developer",
     technologies:
-      "break out components, Rest API, Web pages, EJB2 server and client, Swing GUI, tests Swing GUI, AssertJ Swing, Maven Profiles, multiple environments, modularisation, monolith split, Docker (docker compose), VPN, Linux, Maven plugins, Maven  Jacoco, Install4J. configurable project management tool, Java, Junit, TDD, Swing GUI Tests, Refactoring, EJB2, Git, Gitlab, SVN, Smartgit, Docker, IntelliJ, Netbeans, MySQL, Linux",
+      "Agile-Jira, Refactoring-Modularisation, API-REST, API, EJB2,  Java-Swing, Testing-Swing, Testing-AssertJ, Build-Maven-Profiles, Refactoring-Modularisation, Refactoring-Modularisation, Docker-Compose, VPN, OS-Linux-Desktop, Build-Maven-Plugins, Build-Maven-Jacoco, Install4J, Java, Testing-JUnit, Testing-TDD,  Testing-Swing, Refactoring, Versioning-Git, Versioning-Git-Gitlab, Versioning-SVN, Versioning-Git-SmartGit, Docker, IDE-IntelliJ, IDE-Netbeans, DB-MySQL, OS-Linux",
   },
   {
     head: "2018-10=>2019-03=>Clydesdale Bank=>Glasgow=>Senior Java Developer",
     technologies:
-      "Micro-services, openshift, Migration ,PAAS, account management, payments, Java, Junit, Gradle, Hibernate, JPA, HSQL, SpringBoot, Git, Github. Bitbucket, Smartgit, Tomcat, IntelliJ, Netbeans, Heavvy Refactoring, OS X, Oracle DB",
+      "Agile-Jira, Cloud-MicroServices, Cloud-MicroServices-openshift, Migration ,Cloud-PAAS, Java, Testing-JUnit, Build-Gradle, DB-Hibernate, DB-JPA, DB-HQL, Spring-Springboot, Versioning-Git, Versioning-Git-GitHub, Versioning-Git-BitBucket, Versioning-Git-SmartGit, Server-Tomcat, IDE-IntelliJ, IDE-Netbeans, Refactoring, OS-OS X, DB-Oracle",
   },
   {
-    head: "2018-04=>2018-08=>E-Doctec=>Bad Homburg ( Frankfurt )=>Developer support",
+    head: "2018-04=>2018-08=>E-Doctec=>Bad Homburg ( Frankfurt )=>Support-3:rd-Line",
     technologies:
-      "IBM Filenet, Navigator, CaseManager,CaseBuilder, JavaScript, Dojo, HTML, automated functional tests, maven, Debugging in Java as well as Javascript, modularity, Clean code, transformation via mapper to XML, developer Support devops  ( VMWare ESXi ), GIT, Gitlab, Smartgit, wiki (XWIKI, confluence lookalike wiki), Java, Dojo, Javascript, HTML, Junit, Maven, Hibernate, JDBC, XML ( and transformers ), Vmware ESXi, Git, Gitlab, Smartgit, Xwiki, Websphere, Glassfish, Eclipse, Netbeans, IBM Filenet with components, Heavvy Refactoring, Windows, Linux, SQLServer",
+      "IBM_FileNet-Navigator, IBM_FileNet-CaseManager,IBM_FileNet-CaseBuilder, JavaScript, JavaScript-Dojo, UI-HTML, CI-Jenkins-installation, CI-Jenkins-Configuration, Testing-functional tests, Build-Maven, Refactoring-Modularisation, XML-Transformation, XML-mapper, Support-3:rd-Line, DevOps, Virtualization-VMWare-ESXi, Versioning-Git, Versioning-Git-GitLab, Versioning-Git-SmartGit,  Wiki-Xwiki, Java, Refactoring, Javascript, UI-HTML, Testing-JUnit, Build-Maven, DB-Hibernate, DB-JDBC, XML, XML-transformers, Virtualization-VMWare-ESXi, Versioning-Git, Versioning-Git-GitLab, Versioning-Git-SmartGit, Wiki-Xwiki, Server-WebSphere, Server-GlassFish, IDE-Eclipse, IDE-Netbeans, IBM_FileNet, Refactoring, OS-MS-Windows, OS-Linux-Desktop, DB-MSSQL(SQLServer)",
   },
   {
     head: "2017-12=>2018-03=>Vermop salmon Munich",
     technologies:
-      "Iot, Sheduling, Administrative application, data collectors, controller of client Iot macines, reporting system, Java, Spring boot, JPA (Hibernate), HTML, JavaScript, Google Materials, Thymeleaf Templating, Gradle, IntelliJ, Netbeans, Amazon EC3 (admin), GitLab (Git), Mysql, Postgresql, Deep Re-factoring",
+      "Iot, Java, Spring-Springboot, DB-JPA, DB-Hibernate, UI-HTML, JavaScript, UI-Google-Materials, JavaScript-Thymeleaf-Templating, Build-Gradle, IDE-IntelliJ, IDE-Netbeans, Cloud-AWS, Versioning-Git-GitLab, Versioning-Git, DB-MySQL, DB-PostGreSQL, Refactoring",
   },
   {
     head: "2017-04=>2017-09=>Marval Nordic",
     technologies:
-      "Portals in C#, customization and integrations to legacy systems, lazy loading and pageing in javascript, UI debugging, deployment cycle, configurability, internal portal, 3rd line support, Standardising, C# , javascript, JQuery, HTML, CSS, UI, Web services, LINQ, Visual Studio, ITIL, IIS, UI, Apache..",
+      "C#, Portals, Integration-Customization, Integration, JavaScript, JavaScript-jQuery, DevOps-Deployment, Support-3:rd-Line, Integration-Generelizing, C# , javascript, JavaScript-jQuery, UI-HTML, UI-CSS, UI-Design, API-WebService, DB-LINQ, IDE-Visual Studio, ITIL, Server-IIS, UI-Design, Server-Apache",
   },
   {
     head: "2017-02=>2017-03=>Ericsson Kista",
     technologies:
-      "IoT, Amazon EC2, Minikube, Kubernetes, maven:Fabric8, bash, virtualbox, REST, API, swagger, building proxy, SSL, Javascript, SOAP, WSDL, Java, UI,  MiniKube, Kubernetes, Maven, Fabric8, Bash scripting, automation, Virtualbox, Amazon EC2, REST API, swagger, JAX-WS,  Proxy, SSL, Typescript, microservices, agile, scrum, JUnit, Glassfish, Wildfly swarm, Linux, git, Netbeans, Intellij.",
+      "IoT, Cloud-AWS, Cloud-MiniKube, Cloud-Kubernetes, Cloud-MicroServices, Build-Maven:Fabric8, Scripting-PHP, Scripting-Bash, Virtualization-Virtualbox, API-REST, API, API-REST-Swagger, proxy server, Security-SSL, Javascript, API-SOAP, API-SOAP-WSDL, Java,  Cloud-MiniKube, Cloud-Kubernetes, Build-Maven, Scripting-Bash, CI-Jenkins-Development, Virtualization-Virtualbox, Cloud-AWS, API-REST, API, API-REST-Swagger, API-JAX-WS,  proxy server, Security-SSL, JavaScript-Typescript, Cloud-MicroServices-kubernetes, agile, Agile-Scrum, Testing-JUnit, Server-GlassFish, Server-WildFly swarm, OS-Linux-Desktop, Versioning-Git, IDE-Netbeans, IDE-IntelliJ",
   },
   {
     head: "2016-08=>2017-01=>Own projects=Germany=>Self-study",
     technologies:
-      "Xquery,  BaseX, JPA,  TDD, Junit, Java, Xquery,  BaseX, XML, TDD, Wicket, web-shop, JPA , wicket dependency injection, wicket testing, Unit testing, Maven, Glassfish, Linux, MySQL, git, bitbucket, Netbeans.",
+      "XML-Xquery,  XML-BaseX, DB-JPA,  Testing-TDD, Testing-JUnit, Java, XML-Xquery,  XML-BaseX, XML, Testing-TDD, Wicket, Web-Shop, DB-JPA , Testing-JUnit, Build-Maven, Server-GlassFish, OS-Linux-Desktop, DB-MySQL, Versioning-Git, Versioning-Git-BitBucket, IDE-Netbeans",
   },
   {
     head: "2016-06=>2016-07=>KMP Digitata",
     technologies:
-      "booking application, IoT, JSP, Mave, Jenkins CI, the state was very much limping, suggested quite heavvy changes in the entire process, from the entire structure and orders of the Pom’s to the configuration of Jenkins, Database  importer, MSSQL, MySQL , Mapper, Database Modeling, java, JPA, mapstruct, Java, UI,  JPA (Hibernate), Mapstruct mappers, Integration testing, Unit testing, Maven, Tomcat, Jenkins (CI), Linux, Windows 10, virtualbox, Amazon EC2 cluster with Apache, Tomcat, MySQL and MSSQL running on several Windows servers using mobile Two-Factor Authentication, MSSQL, MySQL, git, Netbeans, Eclipse7",
+      "Agile-Jira, IoT, JSP, Build-Maven, CI-Jenkins-Configuration, DB-Importer, DB-MSSQL(SQLServer), DB-MySQL , Mapper-Mapstruct, DB-Modeling, java, DB-JPA, Java,  DB-JPA, DB-Hibernate, Mapper-Mapstruct, Testing-Integration, Testing-JUnit, Build-Maven, Server-Tomcat, CI-Jenkins-Configuration, OS-Linux-Desktop, OS-MS-Windows 10, Virtualization-Virtualbox, Cloud-AWS, Server-Apache, Server-Tomcat, DB-MySQL, DB-MSSQL(SQLServer) ,Security-Authentication, DB-MSSQL(SQLServer), DB-MySQL, Versioning-Git, IDE-Netbeans, IDE-Eclipse",
   },
   {
     head: "2016-04=>2016-05=>G2G3 Digital",
     technologies:
-      "Java and PHP,  Liferay Portal, Css,javascript, php, Maven, vagrant, sso, REST, API, LDAP, user authentication, Docker, Virtualbox, Tomcat,Liferay, LDAP, Css,  javascript, Java, php, ruby script, scala, UI,  HTML, jQuery, REST, LDAP, Spring Boot, Spring LDAP, Maven, Liferay, Tomcat, Linux, Linux Server, Vagrant, Docker, Virtualbox, MySQL, git, confluence, Netbeans, IntelliJ",
+      "Java, PHP,  Liferay Portal, UI-CSS,javascript, php, Build-Maven, Virtualization-Vagrant, Security-SSO, API-REST, API, Spring-LDAP, Security-Authentication, Docker, Virtualization-Virtualbox, Server-Tomcat,Liferay, Spring-LDAP, UI-CSS,  javascript, Java, php, Scripting-Ruby, Scala,  UI-HTML, JavaScript-jQuery, API-REST, Spring-LDAP, Spring-Springboot, Spring-LDAP, Build-Maven, Liferay, Server-Tomcat, OS-Linux-Desktop, OS-Linux-Server,, Virtualization-Vagrant, Docker, Virtualization-Virtualbox, DB-MySQL, Versioning-Git, Wiki-Atlassian-Confluence, IDE-Netbeans, IDE-IntelliJ",
   },
   {
     head: "2015-09=>2016-02=>Krauss Maffei Automation",
     technologies:
-      "PHP, Java, J2EE, JPA, Hibernate, EJB3, JSF, Primefaces, Project planning, devops, Git, maven, Jenkins, Migration PHP => Java, Project Planning, Requirements Gathering, setting up CI environment, JSF2,  CDI,  UI,  HTML, JavaScript,  CSS3, Primefaces, jQuery, EJB3, Hibernate, JPA2, PHP 4/5,  Linux Server, Glassfish(Installation, config, devel), Virtualbox, VMWare, Jenkins, git,  Junit, Mockito, Powermock, MySQL, SQL, HQL, Netbeans",
+      "PHP, Java, JavaEE, DB-JPA, DB-Hibernate, EJB3, JSF, JSF-PrimeFaces, Adm-Project Planning, DevOps, Versioning-Git, Build-Maven, CI-Jenkins, Migration-PHP=>Java, Adm-Project Planning, Adm-Requirements-Gathering, CI-Jenkins-Installation, JSF,  JSF-CDI,  UI-Design,  UI-HTML, JavaScript,  UI-CSS, JSF-PrimeFaces, JavaScript-jQuery, EJB3, DB-Hibernate, DB-JPA2, PHP,  OS-Linux-Server,, Server-GlassFish, Virtualization-Virtualbox, Virtualization-VMWare, CI-Jenkins, Versioning-Git,  Testing-JUnit, Testing-Mockito, Testing-Powermock, DB-MySQL, DB-SQL, DB-HQL, IDE-Netbeans",
   },
   {
     head: "2015-07=>2015-08=>T-Systems=>2 months",
     technologies:
-      "CSS, MyFaces, JSP,JSF, Security,Authentication, Servlets, Filters, JSP for JSF Framework Supported by Spring, My Faces, Javascript, Jquery, XML. My Eclipse IDE, JPS (Hibernate), SQL AS DDL, Jboss, Websphere(Installation, config, devel)",
+      "Agile-Jira, UI-CSS, JSF-MyFaces, JSP,JSF, Security,Security-Authentication, Java-Web-Servlets, Java-Web-Filters, JSP, JSF-MyFaces, Spring, Javascript, JavaScript-jQuery, XML, IDE-MyEclipse, DB-JPA, DB-Hibernate, DB-SQL AS DDL, Server-JBoss, Server-WebSphere",
   },
   {
     head: "2015-03=>2015-06=>IBM Gmbh=>4 months",
     technologies:
-      "OTP, Karma/Jasmine Unit tests, angularjs, NodeJS, NodeJS, angularjs, Eclipse, Netbeans, Websphere Worklight Server(Installation, config, devel), Servlet",
+      "Security-OTP, Testing-Karma/Jasmine, JavaScript-AngularJS, JavaScript-NodeJS, JavaScript-NodeJS, JavaScript-AngularJS, IDE-Eclipse, IDE-Netbeans, Server-WebSphere Worklight Server, Java-Web-Servlets",
   },
   {
     head: "2014-08=>2014-10=>AFB AG=>2 months",
     technologies:
-      "JSF, Prime Faces, CMS, Composite and Faces components, XHTML,  Jboss, Maven, JPA, EJB, Junit, EasyMock , JSF=>EJB3,JPA,Hibernate, Maven, Scrum(Agile). JUnit, EasyMock, IDE Netbeans, Eclipse, Jboss Wildfly 7.1",
+      "Agile-Jira, JSF-PrimeFaces, CMS, JSF-XHTML,  Server-JBoss, Build-Maven, DB-JPA, EJB3, Testing-JUnit, Testing-EasyMock , JSF, EJB3,DB-JPA,DB-Hibernate, Build-Maven, Agile-Scrum, Agile, Testing-JUnit, Testing-EasyMock, IDE-Netbeans, IDE-Eclipse, Server-JBoss, Server-WildFly 7.1",
   },
   {
     head: "2014-04=>2014-07=>Own projects=Germany=>Self-study",
-    technologies: "JDBC, Hibernate, EJB, JSF",
+    technologies: "DB-JDBC, DB-Hibernate, EJB3, JSF",
   },
   {
     head: "2014-03=>2014-03=>Harvey Nash=>Munich=>Java developer",
     technologies:
-      "Ajax, REST, JSON, Flyway, REST, JSON, EJB3, JPA2, JSF RichFaces, Javascript, SVN, Eclipse, SQL, HQL, Hibernate, Scrum(Agile). Flyway, Jboss",
+      "Agile-Jira, JavaScript-AJAX, API-REST, API-JSON, DB-Flyway, API-REST, API-JSON, EJB3, DB-JPA2, JSF-RichFaces, Javascript, Versioning-SVN, IDE-Eclipse, DB-SQL, DB-HQL, DB-Hibernate, Agile-Scrum ,Agile, DB-Flyway, Server-JBoss",
   },
   {
     head: "2013-10=>2013-12=>Norwegian State (NAV)=>3 Months",
     technologies:
-      "JSF, Atlassian Crucible, Spring integration, Junit, WebSphere Portal Server, JSF-Spring Webflow,Spring Integration (BUS)-XML Mapper, Netbeans IDE,Eclipse, SQL, HQL, Hibernate, Scrum(Agile), Websphere Portal Server(config, devel), Atlassin Crucible",
+      "JSF, QC-Atlassian Crucible, Spring-Integration (BUS), Testing-JUnit, Server-WebSphere Portal Server, JSF, Spring-Security, Spring-Webflow,Spring-Integration (BUS), XML-Mapper, Versioning-Git, Versioning-Git-SourceTree, IDE-Netbeans ,IDE-Eclipse, DB-SQL, DB-HQL, DB-Hibernate, Agile-Scrum, Agile, Server-WebSphere Portal Server, QC-Atlassian Crucible",
   },
   {
     head: "2013-03=>2013-09=>Cognizant=>7 months",
     technologies:
-      "JavaEE , JSF,portlet, DB Design, EJB, Persistence, Web services (SOAP), API, SOAPUI, Junit, Integration tests, RichFaces, Prime Faces, VMWare , Linux OS, Windows XP & 7, JSF -. JQuery, EJB3,JPA,Hibernate, SOAP web services, Maven, JUnit Scrum(Agile), Mockito, IDE Netbeans, Eclipse, SQL, HQL, Scrum(Agile), Jboss, VMWare player, Websphere Portal Server(Installation, config, devel)",
+      "Agile-Jira, JavaEE , JSF-Portlets, DB-Design, EJB3, DB-Persistence-Hibernate, API-WebService, API-SOAP, API, API-SOAPUI, Testing-JUnit, Testing-Integration, JSF-RichFaces, JSF-PrimeFaces, Virtualization-VMWare , OS-Linux-Desktop, OS-MS-Windows XP & 7, JSF-Primefaces, JavaScript-jQuery, EJB3,DB-JPA,DB-Hibernate, API-SOAP, API-WebService, Build-Maven, Testing-JUnit Agile-Scrum, Agile, Testing-Mockito, IDE-Netbeans, IDE-Eclipse, DB-SQL, DB-HQL, Agile-Scrum, Agile, Server-JBoss, Virtualization-VMWare-Player, Server-WebSphere Portal Server",
   },
   {
     head: "2012-09=>2012-12=>SMB AG=>4 months",
     technologies:
-      "Java applet, CSS, Open Faces, JSF, Jquery, XHTML, Servlets, Security and authentication, JSF, Open Faces, Sevlets, filter, Javascript, JQuery, Java Swing,applets -. XML IDE Netbeans, Eclipse, SQL, JBoss",
+      "Versioning-CVS, Java-Applet, UI-CSS, JSF-Open Faces, JSF, JavaScript-jQuery, JSF-XHTML, Java-Web-Servlets, Security-Authentication, JSF, JSF-Open Faces, Java-Web-Sevlets, Java-Web-Filters, Javascript, JavaScript-jQuery, Java, Java-Swing, java-Applets, XML, IDE-Netbeans, IDE-Eclipse, DB-SQL, Server-JBoss",
   },
   {
     head: "2012-02=>2012-08=>Softronic AB=>7 months",
     technologies:
-      "Lotus Domino, Java EE, JSF, JavaScript, AJAX, proxy server, Junit, Prototyping, JSF-Javascript,JQUERY-Servlets-XML IDE Netbeans, IBM RAD, Scrum(Agile)., Glassfish, Websphere Portal Server(devel), SVN",
+      "Agile-Jira, Server-Lotus-Domino, JavaEE, JSF, JavaScript, JavaScript-AJAX, proxy server, Testing-JUnit, Prototyping, JSF, Javascript,JavaScript-jQuery, Java-Web-Servlets, XML, IDE-Netbeans, IDE-IBM-RAD, Agile-Scrum, Agile, Server-GlassFish, Server-WebSphere Portal Server, Versioning-SVN",
   },
   {
     head: "2011-09=>2012-01=>Logica AB=>5 months",
-    technologies: "SiteVision, Velocity, XSLT, UI",
+    technologies: "SiteVision, Velocity, XML-XSLT, UI",
   },
   {
     head: "2011-02=>2011-08=>Osolo AB=>7 months",
     technologies:
-      "C#, Salesforce APEX, Java, JavaScript,Troubleshooting, Java SE (Swing), PHP,  xls reports, barcode creation,scanning, document handling, Salesforce Java APEX, .NET, MVC2, C #, HTML, CSS, JavaScript, jQuery, Linq to SQL, MS SQL Server, Visual Studio 2010, PHP, MySQL, Java SE (Swing): SOQL, Apex, Visualforce, Eclipse , Scrum(Agile)., Apache, IIS",
+      "C#, Salesforce-Java APEX, Java, JavaScript,Troubleshooting,  JavaSE, Java-Swing, PHP, barcode-creation,barcode-scanning, Salesforce-Java APEX, C#, UI-HTML, UI-CSS, JavaScript, JavaScript-jQuery, DB-Linq, DB-SQL, DB-MSSQL(SQLServer), IDE-Visual Studio, PHP, DB-MySQL,  JavaSE, Java-Swing, DB-SOQL, Salesforce-Visualforce, IDE-Eclipse ,Agile-Scrum, Agile, Server-Apache, Server-IIS",
   },
   {
-    head: "2010-03=>2011-02=>Own projects=>London=>OCPJP,OCPJWCD,OCPJWSD",
+    head: "2010-03=>2011-02=>Own projects=>London=>OCPJP,OCPJWSD,OCPJWSD",
     technologies:
-      "Java Certification, OCPJP,OCPJWCD,OCPJWSD , Java SE, MVC, Swing, JSP, JSF, JAX-WS, SOAP, Corporate Administration, Hardware Services",
+      "JavaSE,  Java-Swing, JSP, JSF, API-JAX-WS, API-SOAP, Support-Hardware Services",
   },
   {
     head: "2004-01=>2010-02=>Kraftportalen AB=>Stockholm",
     technologies:
-      "Java, PC Service,Support, Web sites building, PHP,  MySQL, GUI design, Java applet, linux, MS windows, JAX-WS(SOAP), Servlets, GNU (ANSI) C, Java SE (Swing), servlets, applets, C, Cygwin, Gnu Make utilities, Linux, Windows, SVN, SQL Server, GUI, JAX-WS, SQL, Scrum(Agile), IDE-IBM Visual Age, Netbeans, Java EE. JSP, XML, JAX-WS, GUI, JSP, XML, HTML, AJAX, DHTML, .NET, Java EE. Java,JSP,XML, JAX-WS, Servlet, Persistence with BOF (Business Object Framework), TLD, AJAX (~ DHTML), templating, HTML parsing, SQL, Jboss, JSP,JSF, Netbeans, EJB1, Glassfish, SVN, Java SE Swing (Applet), SVN , POS, MySQL, Java SE (Swing), MySQL, requirements specification, GUI, MVC, SQL",
+      "Versioning-Clearcase, Web-Shop,Agile-Jira, Java, Support-PC Service,Support, Web-Sites, PHP,  DB-MySQL, UI-Design, Java-Applet, OS-Linux-Desktop, OS-MS-Windows, API-JAX-WS, API-SOAP, Java-Web-Servlets, C-GNU (ANSI) C, JavaSE,  Java-Swing, Java-Web-Servlets, java-Applets, OS-Cygwin, OS-Linux-Desktop, OS-MS-Windows, Versioning-SVN, DB-MSSQL(SQLServer), UI-Design, API-JAX-WS, DB-SQL, Agile-Scrum, Agile, IDE-IBM Visual Age, IDE-Netbeans, JavaEE, JSP, XML, API-JAX-WS, UI-Design, JSP, XML, UI-HTML, JavaScript-AJAX, UI-DHTML, C#, JavaEE, Java,JSP,XML, API-JAX-WS, Java-Web-Servlets, DB-Persistence-BOF (Business Object Framework), JSP-TLD, JavaScript-AJAX, Java-Web-Templating, UI-HTML parsing, DB-SQL, Server-JBoss, JSP,JSF, IDE-Netbeans, EJB1, Server-GlassFish, Versioning-SVN, JavaSE, Java, Java-Applet, Versioning-SVN , POS, DB-MySQL,  JavaSE, Java-Swing, DB-MySQL, Adm-Requirements-Specification, UI-Design, DB-SQL",
   },
   {
     head: "2000-01=>2003-12=>Kraftportalen AB=>Stockholm",
-    technologies: "PC Service,Support, PHP, MySQL",
+    technologies: "Support-PC Service,Support, PHP, DB-MySQL",
   },
 ];

@@ -27,12 +27,12 @@ export class FileHandler {
       });
 
       const fileStream = fs.createReadStream(filename);
-      fileStream.on("data", function (data) {
+      fileStream.on("data", (data) => {
         shasum.update(data);
       });
 
       // making digest
-      fileStream.on("end", function () {
+      fileStream.on("end", () => {
         const hash = shasum.digest("hex");
         console.log(hash);
         resolve(hash);
@@ -64,24 +64,14 @@ export class FileHandler {
   writeJson = (fileName: string, obj: object) => {
     const jsonString = JSON.stringify(obj, null, 2);
 
-    fs.writeFile(fileName, jsonString, function (err) {
-      if (err) {
-        console.log("err=", err);
-      }
-    });
+    fs.writeFileSync(fileName, jsonString);
     return true;
   };
 
   writeString = (fileName: string, jsonString: string) => {
     console.log("writeString::jsonString =  ", jsonString);
 
-    fs.writeFile(fileName, jsonString, function (err) {
-      if (err) {
-        console.log("err=", err);
-      } else {
-        console.log("result=", err);
-      }
-    });
+    fs.writeFileSync(fileName, jsonString);
     return true;
   };
 
@@ -98,9 +88,7 @@ export class FileHandler {
       }
     }
     console.log(`Creating file :${fileName} !`);
-    fs.writeFile(fileName, "", function (err) {
-      if (err) throw err;
-    });
+    fs.writeFileSync(fileName, "");
   };
   deleteFile = (fileName: string) => {
     if (fs.existsSync(fileName)) {

@@ -6,8 +6,7 @@ require("source-map-support").install();
 
 new Caller();
 
-const reporter = new CvReporter(
-  Constants._OUTPUT_TechnologiesOverTime,
-  dataJsonArray
-);
-reporter.createReport();
+const reporter = new CvReporter(dataJsonArray);
+reporter.createReport(Constants._OUTPUT_TechnologiesLastUsed);
+reporter.createReport(Constants._OUTPUT_TechnologiesOverTime);
+reporter.createReport(Constants._OUTPUT_TechnologiesUnique);
